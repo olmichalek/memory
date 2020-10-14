@@ -1,0 +1,23 @@
+<!Doctype html>
+
+<html>
+<body>
+<p>Write your name and I will remember it!</p>
+<input type="text" id="text1" placeholder="Write your name">
+
+<input type="submit" onclick="submit();" value="check">
+
+
+<script>
+if(localStorage.getItem("userName")!=undefined || localStorage.getItem("userName")!==null){
+function submit() {
+var name = document.getElementById("text1").value; 
+localStorage.setItem("userName", name);
+document.getElementById("greeting").innerHTML= localStorage.getItem("userName");
+}
+}
+
+</script>
+<p id="greeting"></p>
+</body>
+</html>
