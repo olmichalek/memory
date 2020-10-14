@@ -9,12 +9,10 @@
 
 
 <script>
-if(localStorage.getItem("userName")!=undefined || localStorage.getItem("userName")!==null){
 function submit() {
 var name = document.getElementById("text1").value; 
 localStorage.setItem("userName", name);
 document.getElementById("greeting").innerHTML= localStorage.getItem("userName");
-}
 }
 
 </script>
